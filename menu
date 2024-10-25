@@ -1,0 +1,13 @@
+<?php
+add_action('admin_menu','wl_register_menus');
+function wl_register_menus(){
+    add_menu_page('فیلتر کلمات',
+        'فیلتر کلمات',
+        'manage_options',
+        'wl_settings',
+        'wl_settings_handler'
+    );
+}
+function wl_settings_handler(){
+    echo 'welcome to my plugin';
+}
